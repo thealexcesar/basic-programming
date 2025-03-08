@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-float get_change(void);
+int get_change(void);
 int calculate_coins(int cents);
 
 int main(void) {
@@ -9,14 +9,19 @@ int main(void) {
     printf("Total coins: %d\n", total_coins);
 }
 
-float get_change(void) {
-    float change;
-    do {
-        printf("Change owed: ");
-        scanf("%f", &change);
-    } while (change <= 0);
+int get_change() {
+    int n;
+    char buffer[100];
 
-    return change;
+     do {
+        printf("Change owed: ");
+        if (scanf("%d", &n) != 1 || n <= 0) {
+            while(getchar() != '\n');
+            printf("Invalid input. Please enter a positive integer greater than 0.\n");
+        }
+    } while (n < 1);
+
+    return n;
 }
 
 int calculate_coins(int cents) {
