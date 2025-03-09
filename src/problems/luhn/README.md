@@ -19,5 +19,12 @@ This problem verifies the validity of a credit card number using the Luhn algori
 ```sh
 Input: Number: 378282246310005
 Output: AMEX
+xample:
 
+Input: Number: 1234567890123456
+Output: INVALID
+```
+> ### Complexity
+> - Time Complexity: O(n)
+> - Space Complexity: O(1)
 - [CS50x Problem Set 1: Credit    - Official Exercise Link](https://cs50.harvard.edu/x/2025/psets/1/credit/)
